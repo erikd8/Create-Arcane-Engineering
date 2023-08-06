@@ -1,17 +1,17 @@
 
 [general]
-	block_growths = true
+	block_growths = false
 	creative_tab = false
-	grass_over_mycelium = true
-	mycelium_over_grass = true
+	grass_over_mycelium = false
+	mycelium_over_grass = false
 
 [mossy_blocks]
 	#Range: 0.0 ~ 1.0
-	interest_for_face = 0.3
+	interest_for_face = 0.0
 	#Range: 0.0 ~ 1.0
-	patchiness = 0.5
+	patchiness = 0.0
 	#Range: 0.0 ~ 1.0
-	immune_chance = 0.4
+	immune_chance = 0.0
 	needs_air = true
 
 [cracked_blocks]
@@ -93,15 +93,15 @@
 	desire_path_rate = 0.05
 
 [leaf_piles]
-	leaf_piles_slow = true
+	leaf_piles_slow = false
 	#Range: 0.0 ~ 1.0
-	spawn_entity_from_decay = 0.3
+	spawn_entity_from_decay = 0.0
 	#Range: 0.0 ~ 1.0
-	leaf_piles_spawn_chance = 0.005
+	leaf_piles_spawn_chance = 0.0
 	#Range: 1 ~ 256
-	reach = 12
+	reach = 1
 	#Range: 1 ~ 8
-	max_pile_height = 3
+	max_pile_height = 1
 	#leaves that wont spawn leaf piles
 	leaf_piles_blacklist = []
 
@@ -114,5 +114,5 @@
 	fulgurite_chance = 0.4
 
 [rusting]
-	rusting = true
+	rusting = false
 
