@@ -24,34 +24,34 @@
 # Modifies mobcaps, no-chunk-tick, simulation and view-distance depending on the MSPT.
 [dynamic]
 	# (Default = false) Enables this feature.
-	enabled = false
+	enabled = true
 	# (Default = 35) The average MSPT to target.
-	target_mspt = 35
+	target_mspt = 45
 	# (Default = 15) The amount of seconds between dynamic performance updates.
 	update_rate = 15
 	# (Default = 150) The amount of seconds between dynamic viewdistance updates.
 	# This value is separate from the other checks because it makes all clients reload their chunks.
-	view_distance_update_rate = 150
+	view_distance_update_rate = 60
 	# (Default = [Max: 10, Min: 2, Increment: 1]) Distance in which random ticks and mobspawning can happen.
 	max_chunk_tick_distance = 10
-	min_chunk_tick_distance = 2
+	min_chunk_tick_distance = 4
 	chunk_tick_distance_increment = 1
 	# (Default = [Max: 10, Min: 2, Increment: 1]) Distance in which the world will tick, similar to no-tick-vd.
 	max_simulation_distance = 10
-	min_simulation_distance = 2
+	min_simulation_distance = 4
 	simulation_distance_increment = 1
 	# (Default = [Max: 10, Min: 2, Increment: 1]) Distance in which the world will render.
 	max_view_distance = 10
-	min_view_distance = 2
+	min_view_distance = 4
 	view_distance_increment = 1
 	# (Default = [Max: 1.0, Min: 0.3, Increment: 0.1]) Global multiplier that decides the percentage of the mobcap to be used.
 	max_mobcap = 1.0
-	min_mobcap = 0.3
+	min_mobcap = 0.75
 	mobcap_increment = 0.1
 	# (Default = ["chunk_tick_distance", "mobcap_multiplier", "simulation_distance", "view_distance"])
 	# The order in which the settings will be decreased when the server is overloaded.
 	# Removing a setting from the list will disable it.
-	setting_order = ["chunk_tick_distance", "mobcap_multiplier", "simulation_distance", "view_distance"]
+	setting_order = ["view_distance", "chunk_tick_distance", "mobcap_multiplier", "simulation_distance"]
 
 # Stops animals / villagers from breeding if there are too many of the same type nearby.
 [breeding_cap]
@@ -107,7 +107,7 @@
 # Stops entities from ticking if they are too far away.
 [activation_range]
 	# (Default = false) Enables this feature.
-	enabled = false
+	enabled = true
 	# (Default = false) Enables vertical range checks. By default, activation ranges only work horizontally.
 	# This can greatly improve performance on taller worlds, but might break a few very specific ai-based mobfarms.
 	use_vertical_range = false
